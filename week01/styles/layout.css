@@ -16,7 +16,7 @@ body {
 /* Header */
 header {
     grid-area: header;
-    background: #8E9AAF;
+    background: #3f334d;
     color: white;
     padding: 20px 20px 0 20px;  /* no bottom padding */
 }
@@ -25,7 +25,7 @@ header {
 nav {
     display: flex;
     justify-content: space-around;
-    background: black;
+    background: #574b60;
 
     margin-left: -20px;
     margin-right: -20px;
@@ -44,21 +44,21 @@ nav a:hover {
 /* Main */
 main {
     grid-area: main;
-    background: #efd3d7;
+    background: #eaf0ce;
     padding: 20px;
 }
 
 /* Aside */
 aside {
     grid-area: aside;
-    background: #feeafa;
+    background: #c0c5c1;
     padding: 20px;
 }
 
 /* Footer */
 footer {
     grid-area: footer;
-    background: #b4ceb3;
+    background: #7d8491;
     color: black;
     text-align: center;
     padding: 10px;
