@@ -1,0 +1,62 @@
+/* Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    /* REQUIRED: Grid on body */
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto auto 300px auto;
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer";
+}
+
+/* Header */
+header {
+    grid-area: header;
+    background: #444;
+    color: white;
+    padding: 20px;
+}
+
+/* Navigation (Flex required) */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background: black;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+
+nav a:hover {
+    background: #333;
+}
+
+/* Main */
+main {
+    grid-area: main;
+    background: #ccc;
+    padding: 20px;
+}
+
+/* Aside */
+aside {
+    grid-area: aside;
+    background: #eee;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+    background: #444;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
