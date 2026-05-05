@@ -1,43 +1,16 @@
-/* =========================
-   VARIABLES (COLOR SYSTEM)
-========================= */
-:root {
-    --primary: #3f334d;
-    --secondary: #574b60;
-    --accent: #2c5673;
-    --hover: #546a76;
-
-    --background: #f0f0f0;
-    --card-bg: #f5f5dc;
-
-    --text-light: #ffffff;
-    --text-link: #1a4d7a;
-
-    --shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-}
-
-/* =========================
-   GLOBAL STYLES
-========================= */
 body {
+    background: #f0f0f0;
     margin: 0;
     font-family: 'Roboto', Arial, sans-serif;
-    background: var(--background);
 
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
 
-h1 {
-    text-align: center;
-}
-
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 header {
-    background: var(--primary);
-    color: var(--text-light);
+    background: #3f334d;
+    color: white;
     text-align: center;
 }
 
@@ -47,61 +20,59 @@ header {
     padding: 15px;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
+/* NAV */
 nav {
     display: flex;
     justify-content: space-around;
-    background: var(--secondary);
+    background: #574b60;
 }
 
 nav a {
-    color: var(--text-light);
+    color: white;
     text-decoration: none;
     padding: 15px;
-    transition: background 0.2s ease;
 }
 
 nav a:hover {
-    background: var(--hover);
+    background: #546a76;
 }
 
-/* =========================
-   MAIN LAYOUT
-========================= */
+/* MAIN */
 main {
     max-width: 1000px;
     margin: 40px auto 60px;
     padding: 10px;
 }
 
+h1 {
+    text-align: center;
+}
+
+/* GRID */
 .card-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
 }
 
-/* =========================
-   CARD
-========================= */
+/* CARD */
 .card {
-    background: var(--card-bg);
+    background: #f5f5dc;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: var(--shadow);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
     min-height: 100%;
 }
 
 .card h2 {
-    background: var(--accent);
-    color: var(--text-light);
+    background: #2c5673;
+    color: #ffffff;
     margin: 0;
     padding: 12px;
     text-align: center;
 }
 
-/* NO GAP BETWEEN h3 & CONTENT */
+/* NO GAP HERE */
 .card h3 {
     margin: 0 15px;
     text-align: center;
@@ -121,7 +92,7 @@ main {
 
 /* LINKS */
 .card a {
-    color: var(--text-link);
+    color: #1a4d7a;
     text-decoration: none;
 }
 
@@ -129,9 +100,7 @@ main {
     text-decoration: underline;
 }
 
-/* =========================
-   ABOUT SECTION
-========================= */
+/* ABOUT */
 .about-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -146,9 +115,7 @@ main {
     border-radius: 6px;
 }
 
-/* =========================
-   COUNTRY SECTION
-========================= */
+/* COUNTRY (NO GAP FROM H3) */
 .country {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -169,12 +136,10 @@ main {
     text-align: center;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 footer {
-    background: var(--primary);
-    color: var(--text-light);
+    background: #3f334d;
+    color: #ffffff;
     text-align: center;
     font-size: 0.9rem;
     padding: 5px;
