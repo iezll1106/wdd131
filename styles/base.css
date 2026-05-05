@@ -1,33 +1,30 @@
 body {
+    background: #f0f0f0;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
 
-    /* REQUIRED: Grid on body */
     display: grid;
-    grid-template-columns: 3fr 1fr;
     grid-template-rows: auto 1fr auto;
-    grid-template-areas:
-        "header header"
-        "main aside"
-        "footer footer";
 }
 
-/* Header */
+/* HEADER */
 header {
-    grid-area: header;
     background: #3f334d;
     color: white;
-    padding: 20px 20px 0 20px;  /* no bottom padding */
+    text-align: center;
 }
 
-/* Navigation (Flex required) */
+#course-title {
+    display: block;
+    font-size: 1.5rem;
+    padding: 15px;
+}
+
+/* NAV */
 nav {
     display: flex;
     justify-content: space-around;
     background: #574b60;
-
-    margin-left: -20px;
-    margin-right: -20px;
 }
 
 nav a {
@@ -40,25 +37,105 @@ nav a:hover {
     background: #546a76;
 }
 
-/* Main */
+/* MAIN */
 main {
-    grid-area: main;
-    background: #eaf0ce;
-    padding: 20px;
-}
-
-/* Aside */
-aside {
-    grid-area: aside;
-    background: #c0c5c1;
-    padding: 20px;
-}
-
-/* Footer */
-footer {
-    grid-area: footer;
-    background: #7d8491;
-    color: whitesmoke;
-    text-align: center;
+    max-width: 1000px;
+    margin: 40px auto 60px;
     padding: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* GRID */
+.card-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+/* CARD */
+.card {
+    background: #f5f5dc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    min-height: 100%;
+}
+
+.card h2 {
+    background: #2c5673;
+    color: white;
+    margin: 0;
+    padding: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.card h3 {
+    margin: 10px 15px;
+    text-align: center;
+    text-decoration-line: underline;
+}
+
+.card p,
+.card ul {
+    padding: 15px 25px;
+}
+
+.card ul {
+    padding-left: 35px;
+}
+
+/* LINKS */
+.card a {
+    color: #1a4d7a;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* ABOUT SECTION */
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    padding: 15px;
+    align-items: center;
+}
+
+.about-content img {
+    width: 120px;
+    justify-self: end;
+    border-radius: 6px;
+}
+
+/* COUNTRY */
+.country {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+    padding: 15px;
+    align-items: center;
+}
+
+.country img {
+    width: 100px;
+}
+
+.country figcaption {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    background: #7d8491;
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 5px;
 }

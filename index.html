@@ -3,37 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liezl G. Lizardo | WDD 131</title>
+
+    <title>WDD 131 | Dynamic Web Fundamentals | Liezl G. Lizardo</title>
+
+    <meta name="description" content="WDD 131 | Dynamic Web Fundamentals by Liezl G. Lizardo. A personal homepage featuring web development resources, background information, and learning progress in HTML, CSS, and JavaScript.">
+    <meta name="author" content="Liezl G. Lizardo">
+
     <link rel="stylesheet" href="styles/base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <h2>WDD 131: Dynamic Web Fundamentals</h2>
 
-        <!-- Nav MUST be inside header -->
-        <nav>
-            <a href="#">LinkedIn</a>
-            <a href="#">I-Learn</a>
-            <a href="#">Scripture</a>
-            <a href="#">Final Project</a>
-        </nav>
-    </header>
+<header>
+    <span id="course-title">WDD 131 | Dynamic Web Fundamentals</span>
 
-    <main>
-        <h3>About Me</h3>
-        <p>Placeholder content goes here.</p>
-    </main>
+    <nav>
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#">I-Learn</a>
+        <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank" rel="noopener">Scripture</a>
+        <a href="#">Final Project</a>
+    </nav>
+</header>
 
-    <aside>
-        <h3>Web Dev Resources</h3>
-        <p>Sidebar placeholder content.</p>
-    </aside>
+<main>
+    <h1>Liezl G. Lizardo</h1>
 
-    <footer>
-        <p>&#169; <span id="currentYear"></span> Liezl G. Lizardo | Philippines </p>
-        <p id="lastModified"></p>
-    </footer>
-    <script src="scripts/getdates.js"></script>
+    <div class="card-container">
+
+        <!-- ABOUT ME -->
+        <section class="card">
+            <h2>About Me</h2>
+
+            <div class="about-content">
+                <p>
+                    Hi! I am Liezl G. Lizardo from the Philippines. I am currently learning web development.
+                    I enjoy building websites and improving my coding skills.
+                </p>
+
+                <img src="images/liezl.jpg" alt="Photo of Liezl Lizardo">
+            </div>
+
+            <h3>Guimaras, Philippines</h3>
+
+            <div class="country">
+                <figure>
+                    <img src="images/philippines.jpg" alt="Flag of the Philippines">
+                    <figcaption>Official Flag of Philippines</figcaption>
+                </figure>
+
+                <p>
+                    Guimaras is an island province in the Philippines with a history rooted in early Austronesian 
+                    settlements that relied on fishing, farming, and trade with nearby islands. Today, it is known 
+                    for its beautiful beaches, vibrant culture, and sweet mangoes, making it a popular destination 
+                    for tourists. Known as the “Mango Capital of the Philippines,” it celebrates its heritage 
+                    through the Manggahan Festival.
+                </p>
+            </div>
+        </section>
+
+        <!-- RESOURCES -->
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Docs</a></li>
+                <li><a href="https://css-tricks.com/" target="_blank" rel="noopener">CSS Tricks</a></li>
+                <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a></li>
+                <li><a href="https://www.freecodecamp.org/" target="_blank" rel="noopener">freeCodeCamp</a></li>
+            </ul>
+        </section>
+
+    </div>
+</main>
+
+<footer>
+    <p>&copy; <span id="currentyear"></span> Liezl G. Lizardo | Philippines</p>
+    <p id="lastModified"></p>
+</footer>
+
 </body>
 </html>
