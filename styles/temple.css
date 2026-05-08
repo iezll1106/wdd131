@@ -1,0 +1,123 @@
+/* =========================
+   VARIABLES
+========================= */
+:root {
+    --primary: #3f334d;
+    --secondary: #574b60;
+    --accent: #2c5673;
+
+    --background: #f0f0f0;
+    --text-light: #ffffff;
+
+    --shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   GLOBAL
+========================= */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: var(--background);
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    background: var(--primary);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* =========================
+   HAMBURGER
+========================= */
+#menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* =========================
+   NAV
+========================= */
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    display: none;
+}
+
+nav a:hover {
+    background: var(--accent);
+}
+
+/* SHOW MENU */
+nav.open a {
+    display: block;
+}
+
+/* =========================
+   MAIN
+========================= */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+main h2 {
+    text-align: center;
+}
+
+/* =========================
+   GALLERY
+========================= */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+figure {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
