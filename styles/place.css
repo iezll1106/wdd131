@@ -50,6 +50,11 @@ footer {
     padding: 1rem;
 }
 
+footer a {
+    color: white;
+    font-size: 0.8rem;
+}
+
 /* Large Screen */
 @media screen and (min-width: 768px) {
 
