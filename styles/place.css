@@ -6,43 +6,83 @@
     --background-color: #ffffff;
 }
 
-body {
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    color: var(--text-color);
-    background-color: var(--background-color);
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Body */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+/* Header */
 header {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 1.2rem;
 }
 
+header h1 {
+    font-size: 2rem;
+}
+
+/* Main */
+main {
+    position: relative;
+}
+
+/* Hero Image */
 picture img {
     width: 100%;
+    height: auto;
     display: block;
+    object-fit: cover;
 }
 
-main {
-    padding: 1rem;
-}
-
+/* Sections */
 section {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    border: 1px solid #ccc;
+    padding: 1.5rem;
+    background-color: white;
 }
 
-.weather h2::after {
-    content: " ⛅";
+/* Data and Weather */
+.data,
+.weather {
+    text-align: center;
 }
 
+/* Section Headings */
+.data h2,
+.weather h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+/* Paragraph Spacing */
+.data p,
+.weather p {
+    margin-bottom: 0.5rem;
+}
+
+/* Weather Icon */
 .weather-icon {
     width: 60px;
+    margin-bottom: 1rem;
 }
 
+/* Pseudo-element only for larger screens */
+.weather h2::after {
+    content: "";
+}
+
+/* Footer */
 footer {
     background-color: var(--secondary-color);
     color: white;
@@ -50,21 +90,73 @@ footer {
     padding: 1rem;
 }
 
+footer p {
+    margin: 0.3rem 0;
+}
+
 footer a {
     color: white;
     font-size: 0.8rem;
+    text-decoration: none;
 }
 
-/* Large Screen */
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ========================= */
+/* LARGE SCREEN STYLES */
+/* ========================= */
+
 @media screen and (min-width: 768px) {
 
     main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
+        max-width: 1400px;
+        margin: 0 auto;
     }
 
+    /* Floating Data Box */
+    .data {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+
+        width: 280px;
+
+        background-color: rgba(255, 255, 255, 0.9);
+
+        border-radius: 10px;
+
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    /* Floating Weather Box */
+    .weather {
+        position: absolute;
+        bottom: 40px;
+        right: 40px;
+
+        width: 280px;
+
+        background-color: rgba(255, 255, 255, 0.9);
+
+        border-radius: 10px;
+
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    /* Hide SVG icon on larger screens */
     .weather-icon {
         display: none;
+    }
+
+    /* Show emoji icon in heading */
+    .weather h2::after {
+        content: " ⛅";
+    }
+
+    /* Larger heading */
+    header h1 {
+        font-size: 2.5rem;
     }
 }
