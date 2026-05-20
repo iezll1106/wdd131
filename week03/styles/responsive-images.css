@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+main {
+    width: 100%;
+}
+
+.hero {
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero picture,
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Optional styling for larger screens */
+@media screen and (min-width: 768px) {
+
+    body {
+        background-color: #e9ecef;
+    }
+
+    .hero {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
