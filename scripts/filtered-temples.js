@@ -63,8 +63,6 @@ const temples = [
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
 
-  // Added temples
-
   {
     templeName: "Manila Philippines",
     location: "Manila, Philippines",
@@ -89,10 +87,10 @@ const temples = [
     dedicated: "2010, June, 13",
     area: 29356,
     imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/cebu-city-philippines-temple/cebu-city-philippines-temple-4000.jpg"
+      "https://churchofjesuschristtemples.org/assets/img/temples/cebu-city-philippines-temple/cebu-city-philippines-temple-33251.jpg"
   },
 
-    {
+  {
     templeName: "Buenos Aires",
     location: "Buenos Aires, Argentina",
     dedicated: "1986, January, 19",
@@ -101,7 +99,7 @@ const temples = [
       "https://www.churchofjesuschrist.org/imgs/396dd44dcb8c55b10150bae7f3916389465acc0d/full/!1200,/0/default"
   },
 
-    {
+  {
     templeName: "Durban South Africa",
     location: "Durban, South Africa",
     dedicated: "2020, February, 16",
@@ -111,8 +109,9 @@ const temples = [
   }
 ];
 
-// Select Gallery
+// Select Elements
 const gallery = document.querySelector(".gallery");
+const heading = document.querySelector("main h2");
 
 // Create Temple Cards
 function displayTemples(templeList) {
@@ -125,8 +124,11 @@ function displayTemples(templeList) {
 
     card.innerHTML = `
       <h3>${temple.templeName}</h3>
+
       <p><strong>Location:</strong> ${temple.location}</p>
+
       <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+
       <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
 
       <img src="${temple.imageUrl}" 
@@ -139,49 +141,78 @@ function displayTemples(templeList) {
   });
 }
 
-// Display all temples initially
+// Initial Display
 displayTemples(temples);
 
-// FILTERS
+// HOME
+document.querySelector("#home").addEventListener("click", (e) => {
 
-document.querySelector("#home").addEventListener("click", () => {
+  e.preventDefault();
+
+  heading.textContent = "Temple Gallery";
+
   displayTemples(temples);
+
 });
 
-document.querySelector("#old").addEventListener("click", () => {
+// OLD
+document.querySelector("#old").addEventListener("click", (e) => {
+
+  e.preventDefault();
+
+  heading.textContent = "Old Temples";
 
   const oldTemples = temples.filter((temple) =>
     parseInt(temple.dedicated) < 1900
   );
 
   displayTemples(oldTemples);
+
 });
 
-document.querySelector("#new").addEventListener("click", () => {
+// NEW
+document.querySelector("#new").addEventListener("click", (e) => {
+
+  e.preventDefault();
+
+  heading.textContent = "New Temples";
 
   const newTemples = temples.filter((temple) =>
     parseInt(temple.dedicated) > 2000
   );
 
   displayTemples(newTemples);
+
 });
 
-document.querySelector("#large").addEventListener("click", () => {
+// LARGE
+document.querySelector("#large").addEventListener("click", (e) => {
+
+  e.preventDefault();
+
+  heading.textContent = "Large Temples";
 
   const largeTemples = temples.filter((temple) =>
     temple.area > 90000
   );
 
   displayTemples(largeTemples);
+
 });
 
-document.querySelector("#small").addEventListener("click", () => {
+// SMALL
+document.querySelector("#small").addEventListener("click", (e) => {
+
+  e.preventDefault();
+
+  heading.textContent = "Small Temples";
 
   const smallTemples = temples.filter((temple) =>
     temple.area < 10000
   );
 
   displayTemples(smallTemples);
+
 });
 
 // Footer
