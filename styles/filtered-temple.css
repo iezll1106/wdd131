@@ -84,6 +84,9 @@ main h2 {
     text-align: center;
 }
 
+/* =========================
+   Gallery
+========================= */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -101,6 +104,7 @@ main h2 {
     text-align: center;
 
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    perspective: 1000px;
 }
 
 .gallery img {
@@ -112,6 +116,12 @@ main h2 {
     border-radius: 10px;
 
     margin-top: 1rem;
+
+    transition: transform 0.6s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05) rotateY(3deg);
 }
 
 /* =========================
