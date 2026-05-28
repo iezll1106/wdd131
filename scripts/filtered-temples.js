@@ -114,7 +114,7 @@ const temples = [
 const gallery = document.querySelector(".gallery");
 const heading = document.querySelector("main h2");
 
-// Create Temple Cards
+// Temple Cards
 function displayTemples(templeList) {
 
   gallery.innerHTML = "";
