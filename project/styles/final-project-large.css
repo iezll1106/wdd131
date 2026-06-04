@@ -1,0 +1,28 @@
+@media screen and (min-width: 768px) {
+
+    /* Hide hamburger */
+    #menu-button {
+        display: none;
+    }
+
+    /* Show nav */
+    nav {
+        display: flex !important;
+        justify-content: center;
+        gap: 2rem;
+        flex-direction: row;
+        margin-top: 1rem;
+    }
+
+    nav a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+        background: none;
+    }
+}
