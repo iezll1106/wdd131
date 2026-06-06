@@ -2,7 +2,7 @@
    GLOBAL
 ========================= */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     max-width: 600px;
     margin: 0 auto;
     background-color: #f4f4f4;
@@ -12,7 +12,7 @@ body {
    HEADER
 ========================= */
 header {
-    background-color: #4b004b;
+    background-color: #0D5D56;
     color: white;
     text-align: center;
     padding: 1rem;
