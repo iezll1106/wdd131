@@ -90,7 +90,8 @@ main p {
 
 img {
     width: 100%;
-    background: #000;
+    height: auto;
+    display: block;
     animation: fade 15s;
 }
 
