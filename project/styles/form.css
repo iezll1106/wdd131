@@ -1,0 +1,174 @@
+/* =========================
+   GLOBAL
+========================= */
+body {
+    font-family: 'Roboto', sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    background-color: #0D5D56;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* =========================
+   FORM
+========================= */
+form {
+    background-color: #ddd7dd;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+}
+
+/* =========================
+   INPUTS
+========================= */
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: .75rem;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* =========================
+   FIELDSETS
+========================= */
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.stars,
+.features {
+    padding-left: 0;
+}
+
+/* Radio buttons */
+input[type="radio"] {
+    transform: scale(1.3);
+    margin-right: .5rem;
+}
+
+/* Checkboxes */
+input[type="checkbox"] {
+    transform: scale(1.3);
+    margin-right: .5rem;
+}
+
+/* =========================
+   RATING
+========================= */
+fieldset input[type="radio"] {
+    width: auto;
+    margin-right: .5rem;
+}
+
+fieldset label[for^="rating"] {
+    display: inline;
+    font-weight: normal;
+    font-size: 1.4rem;
+}
+
+/* =========================
+   FEATURES
+========================= */
+.features div {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: .75rem;
+}
+
+.features input[type="checkbox"] {
+    transform: scale(1.3);
+    margin: 0;
+}
+
+.features label {
+    display: inline;
+    margin: 0;
+    font-weight: normal;
+    font-size: 1.1rem;
+}
+
+/* =========================
+   OPTIONAL TEXT
+========================= */
+.optional {
+    color: navy;
+    font-size: .85rem;
+    margin-top: 0;
+}
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+input[type="submit"] {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: .75rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #f4f4f4;
+    border: 1px solid #999;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #e5e5e5;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background-color: #0D5D56;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: .25rem 0;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media screen and (max-width: 400px) {
+    body {
+        max-width: 100%;
+    }
+
+    main {
+        padding: .5rem;
+    }
+}
