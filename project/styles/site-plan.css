@@ -2,13 +2,14 @@
    VARIABLES
 ========================== */
 :root {
-    --primary: #166606;      /* Green */
+    --primary: #0D5D56;      /* Dark Teal*/
     --secondary: #ede7e7;    /* Light Gray */
-    --accent1: #f6f930;      /* Mango Yellow */
-    --accent2: #2f2f2f;      /* Dark Gray */
+    --accent1: #F9DC5C;      /* Bright Yellow */
+    --accent2: #403F4C;      /* Dark Gray */
 
-    --white: #ffffff;
-    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --background: #f0f0f0;
+    --text-light: #ffffff;
+    --shadow: 0 3px 8px rgba(0, 0, 0, .15);
 }
 
 /* ==========================
@@ -27,18 +28,19 @@ body {
 ========================== */
 header {
     background-color: var(--primary);
-    color: var(--white);
+    color: var(--text-light);
     text-align: center;
     padding: 2rem;
 }
 
 header h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-light);
     margin-bottom: .5rem;
 }
 
 header h2 {
-    color: var(--white);
+    color: var(--text-light);
     font-size: 1.1rem;
 }
 
@@ -54,13 +56,13 @@ main {
 }
 
 main h2 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: var(--primary);
     margin-bottom: 1rem;
 }
 
 main h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: var(--primary);
     margin-top: 1.5rem;
     margin-bottom: .75rem;
