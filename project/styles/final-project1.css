@@ -8,8 +8,6 @@
 
     --background: #f0f0f0;
     --text-light: #ffffff;
-
-    --shadow: 0 3px 8px rgba(0, 0, 0, .15);
 }
 
 /* =========================
@@ -36,7 +34,7 @@ header h1 {
 }
 
 /* =========================
-   HAMBURGER MENU
+   HAMBURGER
 ========================= */
 #menu-button {
     background: none;
@@ -62,7 +60,6 @@ nav a {
     color: white;
     text-decoration: none;
     padding: 1rem;
-    transition: background-color .3s ease;
 }
 
 nav a:hover {
@@ -73,12 +70,11 @@ nav a:hover {
    MAIN
 ========================= */
 main {
-    max-width: 900px;
+    max-width: 800px;
     margin: 2rem auto;
-    padding: 1rem;
+    padding: 0 1rem;
 }
 
-main h1,
 main h2 {
     text-align: center;
     color: var(--primary);
@@ -92,27 +88,18 @@ main p {
     font-size: 1.1rem;
 }
 
-/* =========================
-   IMAGES
-========================= */
 img {
     width: 100%;
     height: auto;
     display: block;
-}
-
-main img,
-.manggahan img,
-.scroll-track img {
-    animation: fade 1s ease-in-out;
+    animation: fade 15s;
 }
 
 @keyframes fade {
-    from {
+    0% {
         opacity: 0;
     }
-
-    to {
+    100% {
         opacity: 1;
     }
 }
@@ -127,12 +114,8 @@ footer {
     padding: 1rem;
 }
 
-footer p {
-    margin: .3rem 0;
-}
-
 /* =========================
-   CONTACT PAGE
+   CONTACT FORM
 ========================= */
 
 #formmessage {
@@ -140,6 +123,18 @@ footer p {
     font-weight: bold;
     text-align: center;
     margin-bottom: 1rem;
+}
+
+main {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+main h2 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
 }
 
 /* =========================
@@ -159,6 +154,10 @@ form {
     margin-bottom: 1rem;
 }
 
+/* =========================
+   LABELS
+========================= */
+
 form label {
     display: block;
     margin-top: 1rem;
@@ -166,6 +165,10 @@ form label {
     font-weight: bold;
     color: var(--primary);
 }
+
+/* =========================
+   INPUTS
+========================= */
 
 form input[type="text"],
 form input[type="password"],
@@ -181,8 +184,12 @@ form input[type="email"] {
 form input:focus {
     outline: none;
     border-color: var(--secondary);
-    box-shadow: 0 0 5px rgba(50, 159, 91, .4);
+    box-shadow: 0 0 5px rgba(50,159,91,.4);
 }
+
+/* =========================
+   RANGE
+========================= */
 
 input[type="range"] {
     width: 100%;
@@ -196,6 +203,10 @@ input[type="range"] {
     color: var(--accent);
     font-size: 1.1rem;
 }
+
+/* =========================
+   BUTTON
+========================= */
 
 button[type="submit"] {
     width: 100%;
@@ -218,7 +229,6 @@ button[type="submit"]:hover {
 /* =========================
    TOURIST SPOTS PAGE
 ========================= */
-
 .scroll-container {
     overflow: hidden;
     width: 100%;
@@ -229,16 +239,16 @@ button[type="submit"]:hover {
     display: flex;
     gap: 20px;
     width: max-content;
-    animation: scrollLeft 30s linear infinite;
+    animation: scrollLeft 25s linear infinite;
 }
 
 .scroll-track img {
     width: 350px;
     height: 250px;
     object-fit: cover;
-    flex-shrink: 0;
     border-radius: 10px;
-    box-shadow: var(--shadow);
+    flex-shrink: 0;
+    box-shadow: 0 3px 8px rgba(0,0,0,.15);
 }
 
 @keyframes scrollLeft {
@@ -275,8 +285,9 @@ button[type="submit"]:hover {
 
 .manggahan img {
     width: 100%;
+    display: block;
     border-radius: 10px;
-    box-shadow: var(--shadow);
+    box-shadow: 0 3px 8px rgba(0,0,0,.15);
     transition: transform .3s ease;
 }
 
@@ -315,9 +326,7 @@ button[type="submit"]:hover {
 
     .box {
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
     }
-
 }
 
 /* =========================
@@ -328,7 +337,6 @@ button[type="submit"]:hover {
 
     .box {
         grid-template-columns: 1fr;
-        gap: 10px;
     }
 
     .food-festivals-msg h1 {
@@ -338,10 +346,4 @@ button[type="submit"]:hover {
     .food-festivals-msg p {
         font-size: 1rem;
     }
-
-    .scroll-track img {
-        width: 250px;
-        height: 180px;
-    }
-
 }
