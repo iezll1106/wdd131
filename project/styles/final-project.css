@@ -62,11 +62,16 @@ nav a {
     color: var(--accent);
     text-decoration: none;
     padding: 1rem;
-    transition: background-color .3s ease;
+    display: block;
+    text-align: center;
+    transition: all .3s ease;
 }
 
-nav a:hover {
-    background: var(--accent);
+nav a:hover,
+nav a:focus {
+    background-color: var(--accent);
+    color: var(--primary);
+    border-radius: 5px;
 }
 
 /* =========================

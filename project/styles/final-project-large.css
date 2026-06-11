@@ -16,7 +16,7 @@
 
     nav a {
         display: block;
-        color: var(--accent);
+        color: var(--text-light);
         text-decoration: none;
         font-weight: bold;
     }
