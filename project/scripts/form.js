@@ -1,15 +1,4 @@
 // =========================
-// FOOTER
-// =========================
-
-document.getElementById("year").textContent =
-    new Date().getFullYear();
-
-document.getElementById("lastModified").textContent =
-    `Last Modified: ${document.lastModified}`;
-
-
-// =========================
 // REVIEW COUNTER
 // =========================
 
@@ -24,3 +13,13 @@ document.querySelector("form").addEventListener("submit", () => {
     localStorage.setItem("reviewCount", reviewCount);
 
 });
+
+// =========================
+// FOOTER
+// =========================
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+document.getElementById("lastModified").textContent =
+    `Last Modified: ${document.lastModified}`;

@@ -20,154 +20,174 @@
 
 <main>
 
-<form method="get" action="review.html">
+    <form method="get" action="review.html">
 
-    <!-- Website Name -->
-    <label for="website">
-        Website Name *
-    </label>
+        <!-- Overall Rating -->
+        <fieldset>
 
-    <input
-        type="text"
-        id="website"
-        name="website"
-        required
-        placeholder="Enter the website name">
+            <legend>Overall Rating *</legend>
 
-    <!-- Overall Rating -->
-    <fieldset>
+            <input type="radio" id="rating1" name="rating" value="1" required>
+            <label for="rating1">☆</label>
+            <br>
 
-        <label>Overall Rating *</label>
+            <input type="radio" id="rating2" name="rating" value="2" required>
+            <label for="rating2">☆☆</label>
+            <br>
 
-        <input type="radio" id="rating1" name="rating" value="1" required>
-        <label for="rating1">☆</label>
-        <br>
+            <input type="radio" id="rating3" name="rating" value="3" required>
+            <label for="rating3">☆☆☆</label>
+            <br>
 
-        <input type="radio" id="rating2" name="rating" value="2" required>
-        <label for="rating2">☆☆</label>
-        <br>
+            <input type="radio" id="rating4" name="rating" value="4" required>
+            <label for="rating4">☆☆☆☆</label>
+            <br>
 
-        <input type="radio" id="rating3" name="rating" value="3" required>
-        <label for="rating3">☆☆☆</label>
-        <br>
+            <input type="radio" id="rating5" name="rating" value="5" required>
+            <label for="rating5">☆☆☆☆☆</label>
 
-        <input type="radio" id="rating4" name="rating" value="4" required>
-        <label for="rating4">☆☆☆☆</label>
-        <br>
+        </fieldset>
 
-        <input type="radio" id="rating5" name="rating" value="5" required>
-        <label for="rating5">☆☆☆☆☆</label>
+        <!-- Useful Features -->
+        <fieldset>
 
-    </fieldset>
+            <legend>
+                Which features did you find useful on this website?
+            </legend>
 
-    <!-- Useful Website Features -->
-    <fieldset>
+            <p class="optional">
+                (Check all that apply)
+            </p>
 
-        <label>
-            Which features did you find useful on this website?
+            <div class="features">
+
+                <div>
+                    <input
+                        type="checkbox"
+                        id="easy-navigation"
+                        name="easy-navigation"
+                        value="Easy Navigation">
+
+                    <label for="easy-navigation">
+                        Easy Navigation
+                    </label>
+                </div>
+
+                <div>
+                    <input
+                        type="checkbox"
+                        id="responsive-design"
+                        name="responsive-design"
+                        value="Responsive Design">
+
+                    <label for="responsive-design">
+                        Responsive Design
+                    </label>
+                </div>
+
+                <div>
+                    <input
+                        type="checkbox"
+                        id="visual-design"
+                        name="visual-design"
+                        value="Visual Design">
+
+                    <label for="visual-design">
+                        Visual Design
+                    </label>
+                </div>
+
+                <div>
+                    <input
+                        type="checkbox"
+                        id="useful-content"
+                        name="useful-content"
+                        value="Useful Content">
+
+                    <label for="useful-content">
+                        Useful Content
+                    </label>
+                </div>
+
+                <div>
+                    <input
+                        type="checkbox"
+                        id="fast-loading"
+                        name="fast-loading"
+                        value="Fast Loading">
+
+                    <label for="fast-loading">
+                        Fast Loading
+                    </label>
+                </div>
+
+            </div>
+
+        </fieldset>
+
+        <!-- Visit Date -->
+        <label for="visitdate">
+            Date Visited *
         </label>
 
-        <p class="optional">
-            (Check all that apply)
+        <input
+            type="date"
+            id="visitdate"
+            name="visitdate"
+            required>
+
+        <!-- Written Review -->
+        <label for="review">
+            Written Review
+            <span class="optional">(Optional)</span>
+        </label>
+
+        <textarea
+            id="review"
+            name="review"
+            rows="5"
+            placeholder="Share your experience with this website..."></textarea>
+
+        <!-- Reviewer Name -->
+        <label for="username">
+            Your Name
+            <span class="optional">(Optional)</span>
+        </label>
+
+        <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter your name">
+
+        <!-- Submit -->
+        <input
+            type="submit"
+            value="Submit Review">
+
+    </form>
+
+    <!-- Contact Information -->
+    <section class="contact-card">
+
+        <h2>Contact Information</h2>
+
+        <p>
+            <strong>Email:</strong>
+            guimarastourism@gmail.com
         </p>
 
-        <div class="features">
+        <p>
+            <strong>Phone:</strong>
+            +63 9384234940
+        </p>
 
-            <div>
-                <input type="checkbox"
-                       id="easy-navigation"
-                       name="easy-navigation"
-                       value="Easy Navigation">
-                <label for="easy-navigation">
-                    Easy Navigation
-                </label>
-            </div>
+        <p>
+            <strong>Location:</strong>
+            Guimaras, Philippines
+        </p>
 
-            <div>
-                <input type="checkbox"
-                       id="responsive-design"
-                       name="responsive-design"
-                       value="Responsive Design">
-                <label for="responsive-design">
-                    Responsive Design
-                </label>
-            </div>
-
-            <div>
-                <input type="checkbox"
-                       id="visual-design"
-                       name="visual-design"
-                       value="Visual Design">
-                <label for="visual-design">
-                    Visual Design
-                </label>
-            </div>
-
-            <div>
-                <input type="checkbox"
-                       id="useful-content"
-                       name="useful-content"
-                       value="Useful Content">
-                <label for="useful-content">
-                    Useful Content
-                </label>
-            </div>
-
-            <div>
-                <input type="checkbox"
-                       id="fast-loading"
-                       name="fast-loading"
-                       value="Fast Loading">
-                <label for="fast-loading">
-                    Fast Loading
-                </label>
-            </div>
-
-        </div>
-
-    </fieldset>
-
-    <!-- Visit Date -->
-    <label for="visitdate">
-        Date Visited *
-    </label>
-
-    <input
-        type="date"
-        id="visitdate"
-        name="visitdate"
-        required>
-
-    <!-- Written Review -->
-    <label for="review">
-        Written Review
-        <span class="optional">(Optional)</span>
-    </label>
-
-    <textarea
-        id="review"
-        name="review"
-        rows="5"
-        placeholder="Share your experience with this website..."></textarea>
-
-    <!-- Reviewer Name -->
-    <label for="username">
-        Your Name
-        <span class="optional">(Optional)</span>
-    </label>
-
-    <input
-        type="text"
-        id="username"
-        name="username"
-        placeholder="Enter your name">
-
-    <!-- Submit -->
-    <input
-        type="submit"
-        value="Submit Review">
-
-</form>
+    </section>
 
 </main>
 

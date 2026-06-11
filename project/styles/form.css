@@ -39,6 +39,28 @@ label {
 }
 
 /* =========================
+   CONTACT CARD
+========================= */
+
+.contact-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,.15);
+}
+
+.contact-card h2 {
+    color: var(--primary);
+    text-align: center;
+    margin-top: 0;
+}
+
+.contact-card p {
+    margin: .75rem 0;
+    text-align: center;
+}
+
+/* =========================
    INPUTS
 ========================= */
 input[type="text"],
