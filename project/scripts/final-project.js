@@ -1,3 +1,87 @@
+const touristSpots = [
+    {
+        name: "Alubihod Beach",
+        type: "Beach",
+        location: "Nueva Valencia",
+        image: "images/tourist-spot/alubihod.webp"
+    },
+    {
+        name: "Taklong Island",
+        type: "Island",
+        location: "Jordan",
+        image: "images/tourist-spot/taklong_island.webp"
+    },
+    {
+        name: "Guisi Lighthouse",
+        type: "Historical Site",
+        location: "Nueva Valencia",
+        image: "images/tourist-spot/guise_lighthouse.webp"
+    },
+    {
+        name: "Tatlong Pulo",
+        type: "Island",
+        location: "Nueva Valencia",
+        image: "images/tourist-spot/tatlongpulo1.webp"
+    },
+    {
+        name: "Magic Island",
+        type: "Island",
+        location: "Nueva Valencia",
+        image: "images/tourist-spot/magic_island3.webp"
+    },
+    {
+        name: "Cabaling",
+        type: "Beach",
+        location: "Nueva Valencia",
+        image: "images/tourist-spot/cabaling1.webp"
+    },
+];
+
+function displayTouristSpots(spots) {
+
+    const container = document.querySelector("#featured-spots");
+
+    if (!container) return;
+
+    container.innerHTML = "";
+
+    spots.forEach((spot) => {
+
+        container.innerHTML += `
+            <section class="spot-card">
+                <img src="${spot.image}"
+                     alt="${spot.name}"
+                     loading="lazy">
+
+                <h3>${spot.name}</h3>
+
+                <p><strong>Type:</strong> ${spot.type}</p>
+
+                <p><strong>Location:</strong> ${spot.location}</p>
+            </section>
+        `;
+    });
+}
+
+displayTouristSpots(touristSpots);
+
+const today = new Date();
+const hour = today.getHours();
+
+let greeting;
+
+if (hour < 12) {
+    greeting = "Good Morning! Welcome to Guimaras Island.";
+}
+else if (hour < 18) {
+    greeting = "Good Afternoon! Explore the beauty of Guimaras.";
+}
+else {
+    greeting = "Good Evening! Enjoy the peaceful charm of Guimaras.";
+}
+
+document.querySelector("#greeting").textContent = greeting;
+
 // =========================
 // HAMBURGER MENU
 // =========================
