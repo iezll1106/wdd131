@@ -3,38 +3,44 @@ const touristSpots = [
         name: "Alubihod Beach",
         type: "Beach",
         location: "Nueva Valencia",
-        image: "images/tourist-spot/alubihod.webp"
+        image: "images/tourist-spot/alubihod.webp",
+        description: "A famous white-sand beach known for its crystal-clear waters and island-hopping adventures."
     },
     {
         name: "Taklong Island",
         type: "Island",
         location: "Jordan",
-        image: "images/tourist-spot/taklong_island.webp"
+        image: "images/tourist-spot/taklong_island.webp",
+        description: "A protected marine reserve rich in biodiversity and scenic coastal landscapes."
     },
     {
         name: "Guisi Lighthouse",
         type: "Historical Site",
         location: "Nueva Valencia",
-        image: "images/tourist-spot/guise_lighthouse.webp"
+        image: "images/tourist-spot/guise_lighthouse.webp",
+        description: "A historic Spanish-era lighthouse offering spectacular views of the coastline."
     },
     {
         name: "Tatlong Pulo",
         type: "Island",
-        location: "Nueva Valencia",
-        image: "images/tourist-spot/tatlongpulo1.webp"
+        location: "Jordan",
+        image: "images/tourist-spot/tatlongpulo1.webp",
+        description: "A cluster of picturesque islets surrounded by clear waters and coral reefs."
     },
     {
         name: "Magic Island",
         type: "Island",
         location: "Nueva Valencia",
-        image: "images/tourist-spot/magic_island3.webp"
+        image: "images/tourist-spot/magic_island.webp",
+        description: "An enchanting island known for its vibrant marine life and stunning sunsets, perfect for snorkeling and relaxation."
     },
     {
-        name: "Cabaling",
+        name: "Natago Beach",
         type: "Beach",
-        location: "Nueva Valencia",
-        image: "images/tourist-spot/cabaling1.webp"
-    },
+        location: "Jordan",
+        image: "images/tourist-spot/natago4.webp",
+        description: "A quite beach with clear waters and a peaceful atmosphere, ideal for swimming and relaxing."
+    }
 ];
 
 function displayTouristSpots(spots) {
@@ -49,15 +55,17 @@ function displayTouristSpots(spots) {
 
         container.innerHTML += `
             <section class="spot-card">
-                <img src="${spot.image}"
-                     alt="${spot.name}"
-                     loading="lazy">
+
+                <img src="${spot.image}" alt="${spot.name}" loading="lazy">
 
                 <h3>${spot.name}</h3>
 
                 <p><strong>Type:</strong> ${spot.type}</p>
 
                 <p><strong>Location:</strong> ${spot.location}</p>
+
+                <p>${spot.description}</p>
+
             </section>
         `;
     });
